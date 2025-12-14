@@ -15,8 +15,8 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages packa
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 git clone --depth=1 https://github.com/vernesong/OpenClash package/OpenClash
 git clone --depth=1 https://github.com/OldCoding/luci-app-filebrowser package/luci-app-filebrowser
-git clone -b 18.06 --single-branch --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-git clone -b 18.06 --single-branch --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+git clone --depth 1 https://github.com/zijieKwok/luci-theme-alpha package/luci-theme-alpha
+git clone --depth 1 https://github.com/derisamedia/luci-app-alpha-config package/luci-app-alpha-config
 git clone --depth=1 https://github.com/ophub/luci-app-amlogic package/amlogic
 git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 #git clone --depth=1 https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
@@ -31,8 +31,8 @@ git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
 # Remove packages
 #删除lean库中的插件，使用自定义源中的包。
 rm -rf feeds/packages/net/v2ray-geodata
-rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/applications/luci-app-argon-config
+#rm -rf feeds/luci/themes/luci-theme-argon
+#rm -rf feeds/luci/applications/luci-app-argon-config
 rm -rf feeds/luci/themes/luci-theme-alpha
 rm -rf feeds/luci/applications/luci-app-alpha-config
 rm -rf feeds/packages/net/mosdns
