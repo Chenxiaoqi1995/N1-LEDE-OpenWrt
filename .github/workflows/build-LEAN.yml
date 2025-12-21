@@ -7,9 +7,10 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: N1/Lede/LE-feeds.conf.default
-  CONFIG_FILE: N1-LEDE/.config
-  DIY_SH: N1-LEDE/diy.sh
-  FILES: N1-LEDE/files
+  CONFIG_FILE: N1/Lede/LE-mini.config
+  DIY_P1_SH: N1/Lede/diy-part1.sh
+  DIY_P2_SH: N1/Lede/diy-part2.sh
+  FILES: N1/Lede/files
   TZ: Asia/Shanghai
 
 jobs:
@@ -127,13 +128,13 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
 
-    - name: Load custom config
+    - name: 加载DIY_P2
       run: |
         [ -e $FILES ] && mv $FILES openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x $DIY_SH
+        chmod +x $DIY_P2_SH
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY_SH
+        $GITHUB_WORKSPACE/$DIY_P2_SH
 
     # - name: SSH connect to Actions
       # uses: P3TERX/ssh2actions@main
