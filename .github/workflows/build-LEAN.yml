@@ -6,11 +6,11 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  FEEDS_CONF: N1/Lede/LE-feeds.conf.default
-  CONFIG_FILE: N1/Lede/LE-mini.config
-  DIY_P1_SH: N1/Lede/diy-part1.sh
-  DIY_P2_SH: N1/Lede/diy-part2.sh
-  FILES: N1/Lede/files
+  FEEDS_CONF: N1-LEDE/LE-feeds.conf.default
+  CONFIG_FILE: N1-LEDE/LE-mini.config
+  DIY_P1_SH: N1-LEDE/diy-part1.sh
+  DIY_P2_SH: N1-LEDE/diy-part2.sh
+  FILES: N1-LEDE/files
   TZ: Asia/Shanghai
 
 jobs:
@@ -106,7 +106,6 @@ jobs:
       run: |
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
-        sed -i 's|https://github.com/coolsnowwolf/luci.git;openwrt-24.10|https://github.com/coolsnowwolf/luci|g' feeds.conf.default
 
     - name: cache wrt build
       uses: stupidloud/cachewrtbuild@main
