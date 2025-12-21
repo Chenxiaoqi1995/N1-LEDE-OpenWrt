@@ -13,7 +13,7 @@
 
 # Modify default IP   第一行19.07的路径   第二行23.05的路径
 #sed -i 's/192.168.1.1/192.168.123.2/g' package/base-files/files/bin/config_generate
-sed -i 's/192.168.1.1/192.168.123.2/g' package/base-files/luci2/bin/config_generate
+sed -i 's/192.168.1.1/192.168.1.3/g' package/base-files/luci2/bin/config_generate
 
 # 修改主机名
 #sed -i 's/LEDE/OpenWrt/g' package/base-files/files/bin/config_generate
