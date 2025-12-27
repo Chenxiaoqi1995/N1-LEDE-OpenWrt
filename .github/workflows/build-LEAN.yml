@@ -107,12 +107,12 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
 
-    - name: 缓存编译文件
-      uses: stupidloud/cachewrtbuild@main
-      with:
-        ccache: 'true'
-        mixkey: amlogic-${{ env.REPO_BRANCH }}
-        prefix: ${{ github.workspace }}/openwrt
+    # - name: 缓存编译文件
+      # uses: stupidloud/cachewrtbuild@main
+      # with:
+        # ccache: 'true'
+        # mixkey: amlogic-${{ env.REPO_BRANCH }}
+        # prefix: ${{ github.workspace }}/openwrt
         
     - name: 加载自定义文件1
       run: |
