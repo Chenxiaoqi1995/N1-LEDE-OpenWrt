@@ -82,13 +82,7 @@ jobs:
         df -hT
         echo "=============================================================================="
     
-    # 新增：清空工作目录，解决目录非空警告
-    - name: 清空工作目录
-      run: |
-        sudo rm -rf $GITHUB_WORKSPACE/*
-        sudo rm -rf $GITHUB_WORKSPACE/.* 2>/dev/null || true
-        ls -la $GITHUB_WORKSPACE
-            
+       
     - name: 检出代码仓库
       uses: actions/checkout@main
       
