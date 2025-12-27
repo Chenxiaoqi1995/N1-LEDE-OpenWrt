@@ -33,10 +33,10 @@ sed -i 's/<%:Down%>/<%:Move down%>/g' feeds/luci/modules/luci-compat/luasrc/view
 #sed -i 's/luci-theme-argon/luci-theme-bootstrap/g' feeds/luci/collections/luci-ssl-nginx/Makefile
 
 # 拉取passwall
-#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
-#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
-#git clone --depth=1 https://github.com/vernesong/OpenClash package/OpenClash
-#git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
+git clone --depth=1 https://github.com/vernesong/OpenClash package/OpenClash
+git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
    
 
 # 增加 alist （在 ./scripts/feeds install -a 操作之后更换 golang 版本）
